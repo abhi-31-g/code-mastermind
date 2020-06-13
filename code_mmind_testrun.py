@@ -1,12 +1,14 @@
 p=1
 q=2
-r=3
+r=2
 s=4
-
+lis=[p,q,r,s]
 for a in range(5):
     print(a+1," Try")
     b=input("What's on your mind? ")
-    lis=[p,q,r,s]
+    ls=[]
+    for obj in b:
+        ls.append(int(obj))
     listy=[p,q,r,s]
     count=0
     k=0
@@ -15,6 +17,7 @@ for a in range(5):
         if int(b[k])==i:
             count=count+1
             listy.remove(i)
+            ls.remove(i)
         else:
             pass
         k=k+1
@@ -23,10 +26,11 @@ for a in range(5):
         break
     else:
         print("The number of red pegs are ",count)
-    for m in range(4):                              #error from this line till the end of the loop to be fixed 
-        for n in listy:                             # fix whatever is wrong 
-            if int(b[m])==n:
+    for m in ls:                        
+        for n in listy:                         
+            if m==n:
                 countw=countw+1
+                listy.remove(n)
             else:
                 pass
     print("The number of white pegs are ",countw)
