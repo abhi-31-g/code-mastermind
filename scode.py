@@ -68,11 +68,16 @@ def game():
                 if m==n:
                     countw=countw+1
                     listy.remove(n)
+                    break
                 else:
                     pass
         print("\u25a1 "*countw)
     else:
         print("Oh! Better luck next time!")
+        num=""
+        for hhin in lis:
+            num=num+str(hhin)
+        print("The number was ",num)
 game()
 #ADD 2 fEAtures
 # stopping program to end and asking for if player to play once again

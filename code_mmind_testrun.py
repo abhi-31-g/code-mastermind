@@ -1,7 +1,7 @@
 p=1
-q=2
-r=2
-s=4
+q=4
+r=5
+s=1
 lis=[p,q,r,s]
 for a in range(5):
     print(a+1," Try")
@@ -31,6 +31,7 @@ for a in range(5):
             if m==n:
                 countw=countw+1
                 listy.remove(n)
+                break
             else:
                 pass
     print("The number of white pegs are ",countw)
