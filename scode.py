@@ -40,12 +40,28 @@ def game():
     for a in range(looplen):
         print("This is your try number: ",a+1)
         b=input(": ")
+        try:
+            convert=int(b)
+        except:
+            print("Enter a valid number")
+            continue
         if len(b)!=len(lis):
             print("The number of digits are ",len(lis))
             continue
         ls=[]
         for obj in b:
             ls.append(int(obj))
+        limitcheck=0
+        for indnum in ls:
+            if indnum<ll or indnum>ul:
+                limitcheck=limitcheck+1
+            else:
+                pass
+        if limitcheck!=0:
+            print("Consider the digit limits again! ")
+            continue
+        else:
+            pass
         listy=[p,q,r,s]
         count=0
         k=0
