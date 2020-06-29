@@ -1,4 +1,5 @@
 import random
+import time
 print("Hi there! \n Welcome to THE MASTERMIND \n \t -Command Line Exclusive!")
 instr=input("Do you want to read the instructions first? (y/n): ")
 if instr=="y":
@@ -31,6 +32,7 @@ else:
     ll=1
     ul=6
     looplen=10
+start=time.time()
 def game():
     p=random.randint(ll,ul)
     q=random.randint(ll,ul)
@@ -76,6 +78,10 @@ def game():
             k=k+1
         if count==4:
             print("Congratulations! You got it...")
+            endtime=time.time()
+            timetake=endtime-start
+            timetaken=round(timetake,2)
+            print("You elapsed about ",timetaken," seconds!")
             break
         else:
             print("\u2585 "*count)
